@@ -4,6 +4,9 @@ Crear una aplicación Android usando el IDE Android Studio y el lenguaje de prog
 
 En la actividad principal de la aplicación se debe mostrar dos botones, uno para cada ejercicio. Al pulsar sobre uno de los botones se debe abrir una nueva actividad que nos lleve al ejercicio correspondiente.
 
+Cada actividad principal de los ejercicios debe tener el nombre del ejercicio en la barra superior concatenado con un guión y tu propio nombre completo. Por ejemplo:
+"Albums Wrapped 2023 - Daniel Resúa"
+
 ## Ejercicio 1: Albums Wrapped 2023
 
 Este ejercicio trata de elaborar una aplicación que nos muestre la información de los álbumes más relevantes que han salido en este 2023.
@@ -18,11 +21,14 @@ Para la elaboración de esta aplicación se debe usar una base de datos SQLite.
 
 ### Creación de la base de datos
 
-Al crear la base de datos deben insertarse al menos 2 álbumes de vuestra preferencia junto con uno de ellos siempre debe ser el siguiente:
+Al crear la base de datos deben insertarse al menos 2 álbumes de vuestra preferencia junto con uno más, que siempre debe ser el siguiente:
  - Álbum: 'Me muevo con Dios'
  - Artista: 'Cruz Cafune'
  - Número de canciones: 23
  - Valoración: 5 estrellas
+
+*NOTA*: Asumimos que un álbum no debe tener un número de canciones negativo ni menor a 2. Por lo tanto, debemos controlar que esto no ocurra.
+Además, la valoración de un álbum debe ser un número entero entre 1 y 5. Por lo tanto, debemos controlar que esto siempre sea así.
 
 ### Creación de la actividad principal
 

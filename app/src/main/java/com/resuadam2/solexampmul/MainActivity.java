@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.resuadam2.solexampmul.ejer1.Ejer1Acivity;
+import com.resuadam2.solexampmul.ejer1.ui.Ejer1Acivity;
 import com.resuadam2.solexampmul.ejer2.Ejer2Activity;
 
 public class MainActivity extends AppCompatActivity {

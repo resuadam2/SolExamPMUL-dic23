@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">SolExamPMUL</string>
+    <string name="order_by">Ordernar álbumes por:</string>
+    <string name="arrow_up">▲</string>
+    <string name="arrow_down">▼</string>
+    <string name="album">Album</string>
+    <string name="artist">Artista</string>
+    <string name="num_songs">Canciones</string>
+    <string name="value">Valoración</string>
+    <string name="add">Añadir</string>
+    <string name="delete">Borrar</string>
+    <string name="edit">Editar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="star">★</string>
+    <string name="star_border">☆</string>
 </resources>

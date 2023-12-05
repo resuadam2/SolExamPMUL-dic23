@@ -16,7 +16,7 @@
             android:name=".ejer2.Ejer2Activity"
             android:exported="false" />
         <activity
-            android:name=".ejer1.Ejer1Acivity"
+            android:name=".ejer1.ui.Ejer1Acivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

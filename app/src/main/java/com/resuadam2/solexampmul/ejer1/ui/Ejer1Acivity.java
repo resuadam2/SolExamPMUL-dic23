@@ -1,4 +1,4 @@
-package com.resuadam2.solexampmul.ejer1;
+package com.resuadam2.solexampmul.ejer1.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
