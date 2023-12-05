@@ -28,10 +28,17 @@ Al crear la base de datos deben insertarse al menos 2 álbumes de vuestra prefer
 
 En la actividad principal, como ya se adelantó, se debe mostrar un listado con todos los álbumes que tenemos en la base de datos.
 
+Debe existir también un botón flotante que nos lleve a la misma actividad que se abre al pulsar sobre uno de los álbumes de la lista. En esta actividad debemos poder insertar un nuevo álbum en la base de datos.
+
 Además de esto, debe ser posible ordenar los álbumes en base a su nombre, nombre del artista o grupo, número de canciones o valoración. 
 Esto se hará siempre pulsando sobre el título de la columna que queremos ordenar. Si pulsamos sobre el título de la columna que ya está ordenada, se debe invertir el orden de la lista, debe indicarse con una flecha arriba si el orden es ascendente o abajo si es descendente.
 
 El orden por defecto debe ser por nombre del álbum (A-Z). Además, el orden debe mantenerse al volver a la actividad principal, para ello se debe guardar el orden en las preferencias de la aplicación.
+
+### Creación de la actividad de añadir/modificar álbum
+
+Esta subactividad debe tener un botón para guardar el álbum y otro para cancelar la inserción. En caso de ser un álbum nuevo, debemos poder introducir todos los datos del álbum.
+En caso de ser un álbum existente, debemos poder modificar solamente la valoración del álbum.
 
 ## Ejercicio 2: Carta Alta
 
