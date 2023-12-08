@@ -1,4 +1,4 @@
-package com.resuadam2.solexampmul.ejer1.ui;
+package com.resuadam2.solexampmul.ejer2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.resuadam2.solexampmul.R;
 
-public class Ejer1Acivity extends AppCompatActivity {
+public class CartaAltaMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejer1);
+        setContentView(R.layout.activity_main_carta_alta);
     }
 }

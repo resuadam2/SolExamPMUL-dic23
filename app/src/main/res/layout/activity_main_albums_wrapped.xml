@@ -4,10 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ejer1.ui.Ejer1Acivity">
+    tools:context=".ejer1.ui.AlbumsWrappedMainActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/selected_tv_order"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvTittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/albums_wrapped"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </Toolbar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/btAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_short"
@@ -25,8 +48,9 @@
         android:id="@+id/lvAlbums"
         android:layout_width="match_parent"
         android:layout_height="@dimen/lv_albums_height"
+        android:layout_marginTop="@dimen/margin_short"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAlbum"
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="-16dp">
 
@@ -43,25 +67,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <TextView
         android:id="@+id/btnArtista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/artist"
+        android:background="@color/background_tv_order"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:padding="@dimen/padding_short"
         app:layout_constraintBottom_toBottomOf="@+id/btnAlbum"
         app:layout_constraintEnd_toStartOf="@+id/btnNumCanciones"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnAlbum"
         app:layout_constraintTop_toTopOf="@+id/btnAlbum" />
 
-    <Button
+    <TextView
         android:id="@+id/btnAlbum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/album"
+        android:background="@color/background_tv_order"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_short"
+        android:clickable="true"
+        android:layout_marginTop="@dimen/margin_short"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnArtista"
         app:layout_constraintHorizontal_bias="0.5"
@@ -70,21 +103,29 @@
         app:layout_constraintTop_toBottomOf="@+id/tvOrderBy"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <TextView
         android:id="@+id/btnNumCanciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/num_songs"
+        android:background="@color/background_tv_order"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:padding="@dimen/padding_short"
         app:layout_constraintBottom_toBottomOf="@+id/btnArtista"
         app:layout_constraintEnd_toStartOf="@+id/btnValoracion"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnArtista"
         app:layout_constraintTop_toTopOf="@+id/btnArtista" />
 
-    <Button
+    <TextView
         android:id="@+id/btnValoracion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/background_tv_order"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_short"
+        android:clickable="true"
         android:text="@string/value"
         app:layout_constraintBottom_toBottomOf="@+id/btnNumCanciones"
         app:layout_constraintEnd_toEndOf="parent"

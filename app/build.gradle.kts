@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.resuadam2.solexampmul"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.resuadam2.solexampmul"
         minSdk = 17
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

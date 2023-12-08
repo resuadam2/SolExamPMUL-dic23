@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.resuadam2.solexampmul.ejer1.model.Album;
+
 /**
  * Clase que gestiona la base de datos
  */
@@ -21,13 +23,17 @@ public class DBManager extends SQLiteOpenHelper {
 
     private static final String COLUMN_ID = "id"; // Nombre de la columna (id)
 
-    private static final String COLUMN_TITULO = "titulo"; // Nombre de la columna (titulo)
+    public static final String COLUMN_TITULO = "titulo"; // Nombre de la columna (titulo)
 
-    private static final String COLUMN_ARTISTA = "artista"; // Nombre de la columna (artista)
+    public static final String COLUMN_ARTISTA = "artista"; // Nombre de la columna (artista)
 
-    private static final String COLUMN_NUM_CANCIONES = "num_canciones";// Nombre de la columna (num_canciones)
+    public static final String COLUMN_NUM_CANCIONES = "num_canciones";// Nombre de la columna (num_canciones)
 
-    private static final String COLUMN_VALORACION = "valoracion"; // Nombre de la columna (valoracion)
+    public static final String COLUMN_VALORACION = "valoracion"; // Nombre de la columna (valoracion)
+
+    public static final String ORDER_ASC = "ASC"; // Orden ascendente
+
+    public static final String ORDER_DESC = "DESC"; // Orden descendente
 
     /**
      * Constructor de la clase
@@ -169,6 +175,24 @@ public class DBManager extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public Album getAlbum(int id) {
+        Log.i("DBManager", "Obteniendo un album");
+        SQLiteDatabase db = null;
+        Cursor cursor = null;
+        Album album = null;
+        try {
+            db = getReadableDatabase();
+            cursor = db.rawQuery("SELECT * FROM " + TABLE_ALBUMES
+                    + " WHERE " + COLUMN_ID + " = " + id + ";", null);
+            if (cursor.moveToFirst()) {
+                album = new Album(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getInt(3), cursor.getInt(4));
+            }
+        } catch (SQLException e) {
+            Log.e("DBManager", "Error obteniendo un album" + e.getMessage());
+        }
+        return album;
+    }
+
     /**
      * Método para obtener un album
      * @param titulo Titulo del album
@@ -212,8 +236,6 @@ public class DBManager extends SQLiteOpenHelper {
              else cursor = getAlbumes();
         } catch (SQLException e) {
             Log.e("DBManager", "Error obteniendo todos los albumes ordenados" + e.getMessage());
-        } finally {
-            db.endTransaction();
         }
         return cursor;
     }

@@ -13,10 +13,10 @@
         android:theme="@style/Theme.SolExamPMUL"
         tools:targetApi="31">
         <activity
-            android:name=".ejer2.Ejer2Activity"
+            android:name=".ejer2.CartaAltaMainActivity"
             android:exported="false" />
         <activity
-            android:name=".ejer1.ui.Ejer1Acivity"
+            android:name=".ejer1.ui.AlbumsWrappedMainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -27,6 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ejer1.ui.AddAlbum"
+            android:exported="false"/>
     </application>
 
 </manifest>

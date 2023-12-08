@@ -37,7 +37,7 @@ En la actividad principal, como ya se adelantó, se debe mostrar un listado con 
 Debe existir también un botón flotante que nos lleve a la misma actividad que se abre al pulsar sobre uno de los álbumes de la lista. En esta actividad debemos poder insertar un nuevo álbum en la base de datos.
 
 Además de esto, debe ser posible ordenar los álbumes en base a su nombre, nombre del artista o grupo, número de canciones o valoración. 
-Esto se hará siempre pulsando sobre el título de la columna que queremos ordenar. Si pulsamos sobre el título de la columna que ya está ordenada, se debe invertir el orden de la lista, debe indicarse con una flecha arriba si el orden es ascendente o abajo si es descendente.
+Esto se hará siempre pulsando sobre el título de la columna que queremos ordenar. Si pulsamos sobre el título de la columna que ya está ordenada, se debe invertir el orden de la lista, debe indicarse si el orden es ascendente o descendente.
 
 El orden por defecto debe ser por nombre del álbum (A-Z). Además, el orden debe mantenerse al volver a la actividad principal, para ello se debe guardar el orden en las preferencias de la aplicación.
 

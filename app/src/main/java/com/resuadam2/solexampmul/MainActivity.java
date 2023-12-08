@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.resuadam2.solexampmul.ejer1.ui.Ejer1Acivity;
-import com.resuadam2.solexampmul.ejer2.Ejer2Activity;
+import com.resuadam2.solexampmul.ejer1.ui.AlbumsWrappedMainActivity;
+import com.resuadam2.solexampmul.ejer2.CartaAltaMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         Button btnEjer2 = findViewById(R.id.btnEjer2);
 
         btnEjer1.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, Ejer1Acivity.class);
+            Intent intent = new Intent(MainActivity.this, AlbumsWrappedMainActivity.class);
             startActivity(intent);
         });
 
         btnEjer2.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, Ejer2Activity.class);
+            Intent intent = new Intent(MainActivity.this, CartaAltaMainActivity.class);
             startActivity(intent);
         });
     }

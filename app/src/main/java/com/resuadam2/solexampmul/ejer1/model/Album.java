@@ -2,13 +2,25 @@ package com.resuadam2.solexampmul.ejer1.model;
 
 public class Album {
     private String titulo, artista;
-    private int numCanciones, valoracion;
+    private int id, numCanciones, valoracion;
+
+    public Album(int id, String titulo, String artista, int numCanciones, int valoracion) {
+        this.id = id;
+        this.titulo = titulo;
+        this.artista = artista;
+        this.numCanciones = numCanciones;
+        this.valoracion = valoracion;
+    }
 
     public Album(String titulo, String artista, int numCanciones, int valoracion) {
         this.titulo = titulo;
         this.artista = artista;
         this.numCanciones = numCanciones;
         this.valoracion = valoracion;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitulo() {

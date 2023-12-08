@@ -5,7 +5,7 @@
     <string name="arrow_down">▼</string>
     <string name="album">Album</string>
     <string name="artist">Artista</string>
-    <string name="num_songs">Canciones</string>
+    <string name="num_songs">Nº Canciones</string>
     <string name="value">Valoración</string>
     <string name="add">Añadir</string>
     <string name="delete">Borrar</string>
@@ -14,4 +14,15 @@
     <string name="save">Guardar</string>
     <string name="star">★</string>
     <string name="star_border">☆</string>
+    <string name="album_example">Me muevo con Dios</string>
+    <string name="artist_example">Cruz Cafune</string>
+    <string name="num_songs_example">23 canciones</string>
+    <string name="value_example">★★★★★</string>
+    <string name="new_album">Nuevo álbum</string>
+    <string name="edit_album">Editando:</string>
+    <string name="number_songs_example">23</string>
+    <string name="yes">SI</string>
+    <string name="no">NO</string>
+    <string name="albums_wrapped">Albums Wrapped 2023</string>
+    <string name="carta_alta">Carta Alta</string>
 </resources>

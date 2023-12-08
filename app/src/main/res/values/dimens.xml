@@ -2,4 +2,6 @@
 <resources>
     <dimen name="lv_albums_height">600dp</dimen>
     <dimen name="margin_short">16dp</dimen>
+    <dimen name="padding_short">4dp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
 </resources>

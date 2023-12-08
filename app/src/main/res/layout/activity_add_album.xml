@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/padding_short"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_short"
+        android:layout_marginTop="@dimen/margin_short"
+        android:text="@string/album"
+        app:layout_constraintBottom_toTopOf="@+id/lblArtista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTittle"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/lblArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/artist"
+        app:layout_constraintBottom_toTopOf="@+id/lblNumCanciones"
+        app:layout_constraintStart_toStartOf="@+id/lblAlbum"
+        app:layout_constraintTop_toBottomOf="@+id/lblAlbum" />
+
+    <TextView
+        android:id="@+id/lblNumCanciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/num_songs"
+        app:layout_constraintBottom_toTopOf="@+id/lblValoracion"
+        app:layout_constraintStart_toStartOf="@+id/lblArtista"
+        app:layout_constraintTop_toBottomOf="@+id/lblArtista" />
+
+    <TextView
+        android:id="@+id/lblValoracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/value"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+        app:layout_constraintStart_toStartOf="@+id/lblNumCanciones"
+        app:layout_constraintTop_toBottomOf="@+id/lblNumCanciones" />
+
+    <TextView
+        android:id="@+id/star1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_short"
+        android:clickable="true"
+        android:text="@string/star"
+        app:layout_constraintBottom_toBottomOf="@+id/lblValoracion"
+        app:layout_constraintEnd_toStartOf="@+id/star2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/lblValoracion"
+        app:layout_constraintTop_toTopOf="@+id/lblValoracion"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/star5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_short"
+        android:clickable="true"
+        android:text="@string/star_border"
+        app:layout_constraintBottom_toBottomOf="@+id/star4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/star4"
+        app:layout_constraintTop_toTopOf="@+id/star4" />
+
+    <TextView
+        android:id="@+id/star2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/star"
+        app:layout_constraintBottom_toBottomOf="@+id/star1"
+        app:layout_constraintEnd_toStartOf="@+id/star3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/star1"
+        app:layout_constraintTop_toTopOf="@+id/star1" />
+
+    <TextView
+        android:id="@+id/star3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/star"
+        app:layout_constraintBottom_toBottomOf="@+id/star2"
+        app:layout_constraintEnd_toStartOf="@+id/star4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/star2"
+        app:layout_constraintTop_toTopOf="@+id/star2" />
+
+    <TextView
+        android:id="@+id/star4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/star"
+        app:layout_constraintBottom_toBottomOf="@+id/star3"
+        app:layout_constraintEnd_toStartOf="@+id/star5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/star3"
+        app:layout_constraintTop_toTopOf="@+id/star3" />
+
+    <EditText
+        android:id="@+id/etArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/artist_example"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/lblArtista"
+        app:layout_constraintEnd_toEndOf="@+id/etNumCanciones"
+        app:layout_constraintTop_toTopOf="@+id/lblArtista" />
+
+    <EditText
+        android:id="@+id/etAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/album_example"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/lblAlbum"
+        app:layout_constraintEnd_toEndOf="@+id/etArtista"
+        app:layout_constraintTop_toTopOf="@+id/lblAlbum" />
+
+    <EditText
+        android:id="@+id/etNumCanciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="@string/number_songs_example"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/lblNumCanciones"
+        app:layout_constraintEnd_toEndOf="@+id/star5"
+        app:layout_constraintTop_toTopOf="@+id/lblNumCanciones" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCancel"
+        app:layout_constraintTop_toTopOf="@+id/btnCancel" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnOk"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805" />
+
+    <TextView
+        android:id="@+id/tvTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_short"
+        android:text="@string/new_album"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
