@@ -28,4 +28,7 @@
     <string name="resultado">"Resultado: "</string>
     <string name="nueva_carta">Nueva Carta</string>
     <string name="robar_desde_spinners">Robar\ndesde Spinners</string>
+    <string name="num_players">Nº de Jugadores</string>
+    <string name="winner">"Ganador: "</string>
+    <string name="new_game">Jugar</string>
 </resources>

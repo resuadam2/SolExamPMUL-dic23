@@ -29,6 +29,8 @@ public class FrgCarta  extends Fragment {
      */
     String[] numeros = {"1", "2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey"};
 
+    String[] carta = new String[2];
+
     /**
      * Interfaz para comunicar el fragmento con la actividad
      */
@@ -51,16 +53,46 @@ public class FrgCarta  extends Fragment {
         this.robada = robada;
     }
 
+    public String[] getCarta() {
+        return carta;
+    }
+
+    public void setCarta(String[] carta) {
+        this.carta = carta;
+    }
+
+    public int getNumero() {
+        return Integer.parseInt(carta[1]);
+    }
+
+    public String getPalo() {
+        return carta[0];
+    }
+
+    public boolean paloMayor(String palo) {
+        int paloCarta = 0, paloParam = 0;
+        for (int i = 0; i < palos.length; i++) {
+            if (palo.equals(palos[i])) {
+                paloParam = i;
+            }
+            if (carta[0].equals(palos[i])) {
+                paloCarta = i;
+            }
+        }
+        return paloCarta > paloParam;
+    }
+
     public void cartaRobada(String palo, String numero) {
         robada = true;
         if (debug) {
             Log.i("cartaRobada", "Palo: " + palo + " Número: " + numero);
-            btnCartaSpinners.setEnabled(false);
-            spnNumero.setEnabled(false);
-            spnPalo.setEnabled(false);
         }
         tvResultado.setText(tvResultado.getText().toString() + "\nPalo: " + palo + "\nNúmero: " + numero);
-        btnCarta.setEnabled(false);
+        carta[0] = palo;
+        carta[1] = numero;
+        if (listener != null) {
+            listener.onCartaRobada(this, robada);
+        }
     }
 
     public void setOnCartaRobadaListener(OnCartaRobadaListener listener, boolean debug) {
