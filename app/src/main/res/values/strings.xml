@@ -25,4 +25,7 @@
     <string name="no">NO</string>
     <string name="albums_wrapped">Albums Wrapped 2023</string>
     <string name="carta_alta">Carta Alta</string>
+    <string name="resultado">"Resultado: "</string>
+    <string name="nueva_carta">Nueva Carta</string>
+    <string name="robar_desde_spinners">Robar\ndesde Spinners</string>
 </resources>

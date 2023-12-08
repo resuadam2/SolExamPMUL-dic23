@@ -36,10 +36,10 @@ En la actividad principal, como ya se adelantó, se debe mostrar un listado con 
 
 Debe existir también un botón flotante que nos lleve a la misma actividad que se abre al pulsar sobre uno de los álbumes de la lista. En esta actividad debemos poder insertar un nuevo álbum en la base de datos.
 
-Además de esto, debe ser posible ordenar los álbumes en base a su nombre, nombre del artista o grupo, número de canciones o valoración. 
-Esto se hará siempre pulsando sobre el título de la columna que queremos ordenar. Si pulsamos sobre el título de la columna que ya está ordenada, se debe invertir el orden de la lista, debe indicarse si el orden es ascendente o descendente.
+Además de esto, debe ser posible ordenar los álbumes en base a su nombre, nombre del artista o grupo, número de canciones o valoración, todos ellos de forma ascendente o descendente. 
+Debe indicarse de alguna forma si el orden es ascendente o descendente y en base a qué dato se están ordenando los álbumes.
 
-El orden por defecto debe ser por nombre del álbum (A-Z). Además, el orden debe mantenerse al volver a la actividad principal, para ello se debe guardar el orden en las preferencias de la aplicación.
+El orden por defecto debe ser por nombre del álbum (A-Z). Además, el orden debe mantenerse al volver a la actividad principal, para ello se debe guardar el orden en las _preferencias de la aplicación_.
 
 ### Creación de la actividad de añadir/modificar álbum
 
@@ -52,13 +52,15 @@ Este ejercicio trata de elaborar una aplicación que nos permita jugar a la cart
 
 Para ello, debemos elaborar un fragmento que funcione como un componente independiente y reutilizable que nos permita robar una carta de la baraja española.
 
-En la actividad principal de esta aplicación debe haber la opción de iniciar una nueva partida, con tantas cartas como el usuario haya insertado en un EditText.
+En la actividad principal de esta aplicación debe haber la opción de iniciar una nueva partida, con tantas cartas como el usuario nos indique (mínimo 2 para poder jugar y máximo 4).
 
-Al pulsar sobre el botón de iniciar una neuva partida, se generarán tantos fragmentos como cartas se hayan indicado en el EditText. Cada fragmento nos permitirá robar una carta aleatoria de la baraja española, mostrando su número y palo.
+Al pulsar sobre el botón de iniciar una nueva partida, se generarán tantos fragmentos como cartas se hayan indicado. Cada fragmento nos permitirá robar una carta aleatoria de la baraja española, mostrando su número y palo.
 
-Cada vez que robemmos una carta de un fragmento, este debe dejar de permitir robar más cartas. 
+Cada vez que robemos una carta de un fragmento, este debe dejar de permitir robar más cartas. 
 
 Cuándo hayamos robado todas las cartas, se debe mostrar un mensaje indicando quién ha ganado la partida, es decir, quién tiene la carta más alta.
+
+En caso de empate, se ganará la partida dependiendo del palo de la carta. El orden de los palos de mayor a menor peso es: oros, copas, espadas y bastos.
 
 *NOTA*: Debemos controlar el que todos los fragmentos funcionen como si estuviesemos en realidad robando de la misma baraja. Es decir, no puede haber dos fragmentos que nos muestren la misma carta.
 
