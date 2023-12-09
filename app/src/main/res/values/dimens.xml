@@ -5,4 +5,5 @@
     <dimen name="padding_short">4dp</dimen>
     <dimen name="text_size_large">24sp</dimen>
     <dimen name="margin_long">128dp</dimen>
+    <dimen name="margin">64dp</dimen>
 </resources>

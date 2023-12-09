@@ -54,7 +54,7 @@ Para ello, debemos elaborar un fragmento que funcione como un componente indepen
 
 En la actividad principal de esta aplicación debe haber la opción de iniciar una nueva partida, con tantas cartas como el usuario nos indique (mínimo 2 para poder jugar y máximo 4).
 
-Al pulsar sobre el botón de iniciar una nueva partida, se generarán tantos fragmentos como cartas se hayan indicado. Cada fragmento nos permitirá robar una carta aleatoria de la baraja española, mostrando su número y palo.
+Al pulsar sobre el botón de iniciar una nueva partida, se mostrarán tantos fragmentos como cartas se hayan indicado. Cada fragmento nos permitirá robar una carta aleatoria de la baraja española, mostrando su número y palo.
 
 Cada vez que robemos una carta de un fragmento, este debe dejar de permitir robar más cartas. 
 

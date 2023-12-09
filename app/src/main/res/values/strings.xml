@@ -31,4 +31,8 @@
     <string name="num_players">Nº de Jugadores</string>
     <string name="winner">"Ganador: "</string>
     <string name="new_game">Jugar</string>
+    <string name="player3">Jugador 3</string>
+    <string name="player4">Jugador 4</string>
+    <string name="player2">Jugador 2</string>
+    <string name="player1">Jugador 1</string>
 </resources>

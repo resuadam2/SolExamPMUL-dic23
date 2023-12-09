@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/activity_main_carta_alta"
     tools:context=".ejer2.CartaAltaMainActivity">
 
     <Toolbar
@@ -33,26 +34,14 @@
         android:id="@+id/lblNumPlayers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="@dimen/margin_short"
         android:text="@string/num_players"
-        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
-        app:layout_constraintEnd_toStartOf="@+id/numJugadores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spnNumPlayers"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-    <EditText
-        android:id="@+id/numJugadores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="2"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/lblNumPlayers"
-        app:layout_constraintEnd_toStartOf="@+id/btnStart"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/lblNumPlayers"
-        app:layout_constraintTop_toTopOf="@+id/lblNumPlayers" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvWinner"
@@ -70,20 +59,124 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/new_game"
-        app:layout_constraintBottom_toBottomOf="@+id/numJugadores"
+        app:layout_constraintBottom_toBottomOf="@+id/spnNumPlayers"
         app:layout_constraintEnd_toStartOf="@+id/tvWinner"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/numJugadores"
-        app:layout_constraintTop_toTopOf="@+id/numJugadores" />
+        app:layout_constraintStart_toEndOf="@+id/spnNumPlayers"
+        app:layout_constraintTop_toTopOf="@+id/spnNumPlayers" />
 
-    <ListView
-        android:id="@+id/lvCartas"
-        android:layout_width="match_parent"
-        android:layout_height="613dp"
-        android:layout_marginTop="@dimen/margin_long"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Spinner
+        android:id="@+id/spnNumPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="@dimen/margin"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/lblNumPlayers"
+        app:layout_constraintEnd_toStartOf="@+id/btnStart"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lblNumPlayers"
+        app:layout_constraintTop_toTopOf="@+id/lblNumPlayers" />
+
+    <LinearLayout
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_short"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/player3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/player2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/lblNumPlayers"
+        app:layout_constraintVertical_bias="0.23000002">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player1"></TextView>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/carta1"
+            android:name="com.resuadam2.solexampmul.ejer2.FrgCarta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            ></androidx.fragment.app.FragmentContainerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/player1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player1"
+        app:layout_constraintTop_toTopOf="@+id/player1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player2"></TextView>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/carta2"
+            android:name="com.resuadam2.solexampmul.ejer2.FrgCarta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            ></androidx.fragment.app.FragmentContainerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/player1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/player1"
+        app:layout_constraintTop_toBottomOf="@+id/player1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player3"></TextView>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/carta3"
+            android:name="com.resuadam2.solexampmul.ejer2.FrgCarta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            ></androidx.fragment.app.FragmentContainerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/player3"
+        app:layout_constraintEnd_toEndOf="@+id/player2"
+        app:layout_constraintStart_toStartOf="@+id/player2"
+        app:layout_constraintTop_toTopOf="@+id/player3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player4"></TextView>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/carta4"
+            android:name="com.resuadam2.solexampmul.ejer2.FrgCarta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            ></androidx.fragment.app.FragmentContainerView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
